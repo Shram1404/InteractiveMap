@@ -1,0 +1,120 @@
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+html {
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2? family=Balsamiq+Sans&display=swap');
+
+body {
+    margin-bottom: 600px;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color:white;
+}
+
+header a {
+    font-size: 20px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.part {
+    opacity: 0.5;
+    fill: white;
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+    0% {
+        fill: white;
+        opacity: 0.5;
+    }
+
+    50% {
+        fill: rgb(0,0,90);
+        opacity: 0.5;
+    }
+
+    100% {
+        fill: white;
+        opacity: 0.5;
+    }
+}
+
+input {
+    position: relative;
+    border: 2px solid rgba(0,0,0,.12);
+    width: 100%;
+    padding: 1em;
+    background: #fff;
+    padding-left: 100px;
+}
+
+.search {
+    text-align: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.map {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 10px;
+}
+
+.srcBtnn {
+    background-color: rgb(0,0,50);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px 60px;
+    border: none;
+    font-weight: 600;
+    font-size: large;
+}
+
+    .srcBtnn:hover {
+        background-color: rgb(0,0,90);
+        opacity: 0.8;
+    }
+
+.srchButton {
+    margin-top: 10px;
+}

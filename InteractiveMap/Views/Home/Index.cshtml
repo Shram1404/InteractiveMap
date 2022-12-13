@@ -1,0 +1,25 @@
+﻿@model IEnumerable<InteractiveMap.Models.Audience>
+@{
+    ViewData["Title"] = "Map Page";
+    string imgWay = "";
+    string viewBox = "";
+}
+ <form asp-asp-controller="Home" asp-action="Index" method="get"> 
+    <div class="row search">
+        <h1>Введіть номер аудиторії/лабораторії</h1>
+        <input class="srcBtn" name="SearchString" type="text" placeholder="№ аудиторії" />
+        <input class = "srcBtnn"type="submit" value="Пошук" />
+    </div>
+</form>
+  <div class="row map">
+    @foreach (var item in Model) { viewBox = item.imgSvg; imgWay = item.imgWay; }
+        <svg class="parts" viewBox="@viewBox">
+            @foreach(var item in Model)
+            {
+                <path id="myPath" class="@Html.DisplayFor(modelItem=>item.imgWay) part" d="@Html.DisplayFor(modelItem=>item.SvgCode)"></path>
+            }    
+        </svg>
+    <img id="myImg" src="@imgWay">
+  </div>
+
+
